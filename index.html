@@ -1,61 +1,442 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-    <title>Portfolio - Ngô Ý Nhi</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; line-height: 1.6; }
-        header { background: #333; color: #fff; text-align: center; padding: 2rem; }
-        .container { max-width: 1100px; margin: auto; padding: 0 2rem; overflow: auto; }
-        h2 { color: #333; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem; }
-        .project-card { background: white; padding: 1rem; margin-bottom: 1rem; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .cert-card { background: #e7f3fe; padding: 0.5rem 1rem; margin: 0.5rem 0; border-left: 4px solid #2196F3; }
-        footer { text-align: center; padding: 1rem; background: #333; color: #fff; margin-top: 2rem; }
-        a { color: #2196F3; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — AI Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Ngô Ý Nhi</h1>
-        <p>AI Engineer (Data Scientist/ AI Engineer Intern)</p>
-    </header>
 
-    <div class="container">
-        <section>
-            <h2>Giới thiệu</h2>
-            <p>Tôi là sinh viên năm cuối ngành Công nghệ thông tin với đam mê trong lĩnh vực Trí tuệ nhân tạo và Phân tích dữ liệu. Tôi thích biến những con số và dữ liệu thành những giải pháp thực tế, hữu ích.</p>
-        </section>
-
-        <section>
-            <h2>Dự án</h2>
-            <div class="project-card">
-                <h3>Hệ thống RAG Chatbot</h3>
-                <p>Xây dựng chatbot có thể trả lời câu hỏi dựa trên tài liệu PDF sử dụng LangChain, ChromaDB và OpenAI API.</p>
-                <a href="LINK_DEN_REPO">Xem trên GitHub</a>
-            </div>
-            <div class="project-card">
-                <h3>Phân tích dữ liệu COVID-19</h3>
-                <p>Sử dụng Python (Pandas, Matplotlib) để phân tích và trực quan hóa xu hướng dịch bệnh tại Việt Nam.</p>
-                <a href="LINK_DEN_REPO">Xem trên GitHub</a>
-            </div>
-        </section>
-
-        <section>
-            <h2>Chứng chỉ</h2>
-            <div class="cert-card">🏅 Google Data Analytics Professional Certificate</div>
-            <div class="cert-card">🏅 Deep Learning Specialization (Coursera)</div>
-            <div class="cert-card">🏅 MLOps Fundamentals (Google Cloud)</div>
-        </section>
-
-        <section>
-            <h2>Liên hệ</h2>
-            <p>📧 <a href="mailto:email_cua_ban@example.com">nhi.ny@example.com</a></p>
-            <p>🔗 <a href="LINK_LINKEDIN_CUA_BAN">LinkedIn</a> | <a href="LINK_GITHUB_CUA_BAN">GitHub</a></p>
-        </section>
+  <!-- ═══════════════════════════════════════ NOISE OVERLAY ═══ -->
+  <div class="noise"></div>
+  <!-- ═══════════════════════════════════════ NAVBAR ═══ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-name">Ngô Ý Nhi</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link" data-text="Về tôi">Về tôi</a></li>
+        <li><a href="#projects" class="nav-link" data-text="Dự án">Dự án</a></li>
+        <li><a href="#certificates" class="nav-link" data-text="Chứng chỉ">Chứng chỉ</a></li>
+        <li><a href="#contact" class="nav-link" data-text="Liên hệ">Liên hệ</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </nav>
 
-    <footer>
-        <p>© 2025 Ngô Ý Nhi</p>
-    </footer>
+  <!-- ═══════════════════════════════════════ HERO ═══ -->
+  <section class="hero" id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-content">
+      <div class="hero-tag reveal-up">AI Engineer · Student</div>
+      <h1 class="hero-title reveal-up delay-1">
+        Xây dựng<br />
+        <span class="gradient-text">tương lai</span> với<br />
+        trí tuệ nhân tạo
+      </h1>
+      <p class="hero-desc reveal-up delay-2">
+        Đam mê Computer Vision, Generative AI và ứng dụng Deep Learning vào các bài toán thực tiễn.
+        Đang trên con đường trở thành AI Engineer chuyên nghiệp.
+      </p>
+      <div class="hero-cta reveal-up delay-3">
+        <a href="#projects" class="btn-primary">Xem dự án <i class="ph ph-arrow-right"></i></a>
+        <a href="#contact" class="btn-ghost">Liên hệ</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="avatar-ring"></div>
+      <div class="avatar-wrap">
+        <img
+          src="./images/_BB15088_Original.JPG"
+          alt="Avatar"
+          class="avatar-img"
+        />
+      </div>
+      <!-- orbiting dots -->
+      <div class="orbit orbit-1"><div class="orbit-dot"></div></div>
+      <div class="orbit orbit-2"><div class="orbit-dot"></div></div>
+    </div>
+    <div class="scroll-hint reveal-up delay-4">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ ABOUT ═══ -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-label reveal-left">// 01 — Về tôi</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title reveal-up">Tôi là ai?</h2>
+          <p class="about-para reveal-up delay-1">
+            Mình là <strong>Ngô Ý Nhi</strong>, sinh viên năm 3 ngành Công nghệ thông tin, với niềm đam mê mãnh liệt
+            với Trí tuệ nhân tạo. Từ những ngày đầu tiếp xúc với AI, mình đã bị cuốn hút bởi khả năng của nó trong việc giải quyết các vấn đề phức tạp và tạo ra những điều mới mẻ.
+          </p>
+          <p class="about-para reveal-up delay-2">
+            Mình tin rằng AI không chỉ là công cụ mà là ngôn ngữ của tương lai. Mỗi model được train,
+            mỗi pipeline được xây dựng đều là một bước tiến trên con đường đó.
+          </p>
+          <div class="skills-grid reveal-up delay-3">
+            <div class="skill-tag">Python</div>
+            <div class="skill-tag">PyTorch</div>
+            <div class="skill-tag">FrontEnd(HTML, CSS, JavaScript)</div>
+            <div class="skill-tag">BackEnd(Node.js)</div>
+            <div class="skill-tag">Microsoft SQL Server</div>
+            <div class="skill-tag">Thiết kế UI/UX</div>
+          </div>
+        </div>
+        <div class="about-stats reveal-right delay-1">
+          <div class="stat-card">
+            <div class="stat-number-wrapper">
+              <span class="stat-num" data-target="10">0</span><span class="stat-num">+</span>
+            </div>
+            <span class="stat-label">Dự án hoàn thành</span>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-number-wrapper">
+              <span class="stat-num" data-target="8">0</span><span class="stat-num">+</span>
+            </div>
+            <span class="stat-label">Chứng chỉ</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ PROJECTS ═══ -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-label reveal-left">// 02 — Dự án</div>
+      <h2 class="section-title reveal-up">Công trình nổi bật</h2>
+      <p class="section-sub reveal-up delay-1">Những dự án và nghiên cứu tôi đã thực hiện và đóng góp</p>
+
+      <div class="projects-grid">
+
+        <article class="project-card reveal-up delay-1" data-id="1">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&h=340&fit=crop" alt="Salient Object Segmentation" class="card-img" />
+            <div class="card-overlay">
+              <a href="./cert/VisualSalience.pdf" target="_blank" class="overlay-btn">Xem chi tiết <i class="ph ph-arrow-up-right"></i></a>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-tags">
+              <span class="tag featured">⭐ Featured</span>
+              <span class="tag">Deep Learning</span>
+            </div>
+            <h3 class="card-title">BEAT-Unet: Salient Object Segmentation</h3>
+            <p class="card-desc">Nghiên cứu kiến trúc mạng U-Net kết hợp Transformer bottleneck, module dò biên học được (Learnable Edge) và Attention Gate. Sử dụng hàm mất mát lai (BCE + Dice). Huấn luyện trên tập DUTS-TR đạt hiệu suất cao trong việc phân đoạn các đối tượng nổi bật trên nền phức tạp.</p>
+            <div class="card-tech">
+              <span>PyTorch</span><span>Transformer</span><span>U-Net</span>
+            </div>
+            <div class="card-links">
+              <a href="pdf/VisualSalience.pdf" target="_blank" class="card-link"><i class="ph ph-file-pdf"></i> Research Paper</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal-up delay-2" data-id="2">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=340&fit=crop" alt="Medical MRI" class="card-img" />
+            <div class="card-overlay">
+              <a href="./cert/Super_Resolution_Medical.pdf" target="_blank" class="overlay-btn">Xem chi tiết <i class="ph ph-arrow-up-right"></i></a>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-tags">
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Computer Vision</span>
+            </div>
+            <h3 class="card-title">Super Resolution For Medical Image</h3>
+            <p class="card-desc">Đề xuất phương pháp siêu phân giải ảnh cộng hưởng từ (MRI) kết hợp thuật toán Optical Flow TV-L1 để đăng ký ảnh và cơ chế tiêm chi tiết tần số cao có chọn lọc (FI-SR). Đánh giá trên tập dữ liệu IXI, giúp phục hồi chi tiết mô tinh vi mà không cần huấn luyện mô hình học sâu.</p>
+            <div class="card-tech">
+              <span>Optical Flow</span><span>Machine Learning</span><span>CLAHE</span>
+            </div>
+            <div class="card-links">
+              <a href="./cert/Super_Resolution_Medical.pdf" target="_blank" class="card-link"><i class="ph ph-file-pdf"></i> Research Paper</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal-up delay-3" data-id="3">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=600&h=340&fit=crop" alt="E-commerce Website" class="card-img" />
+            <div class="card-overlay">
+              <a href="https://github.com/TruongAnhKietK49/MuaRightWeb" target="_blank" class="overlay-btn">Xem mã nguồn <i class="ph ph-arrow-up-right"></i></a>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-tags">
+              <span class="tag">Web Dev</span>
+              <span class="tag">Software Engineering</span>
+            </div>
+            <h3 class="card-title">MuaRightWeb - Nền tảng Bán Nước Hoa</h3>
+            <p class="card-desc">Đồ án môn Công nghệ phần mềm xây dựng website thương mại điện tử. Trực tiếp đảm nhận vai trò phát triển Frontend và Backend cho phân hệ Quản lý người bán (Seller) và xây dựng một phần chức năng điều phối cho bộ phận Giao hàng (Shipper).</p>
+            <div class="card-tech">
+              <span>Frontend</span><span>Backend</span><span>Database</span>
+            </div>
+            <div class="card-links">
+              <a href="https://github.com/TruongAnhKietK49/MuaRightWeb" target="_blank" class="card-link"><i class="ph ph-github-logo"></i> GitHub</a>
+            </div>
+          </div>
+        </article>
+
+      </div></div>
+  </section>
+
+<section class="section certificates" id="certificates">
+    <div class="container">
+      <div class="section-label reveal-left">// 03 — Chứng chỉ</div>
+      <h2 class="section-title reveal-up">Chứng chỉ & Khóa học</h2>
+
+      <div class="cert-timeline">
+
+        <div class="cert-item reveal-left" data-year="2026">
+          <div class="cert-dot"></div>
+          <div class="cert-card">
+            <div class="cert-logo google">
+              <i class="ph ph-google-logo"></i>
+            </div>
+            <div class="cert-info">
+              <span class="cert-issuer">Google Cloud Skills Boost</span>
+              <h3 class="cert-name">Gemini for Data Scientists and Analysts</h3>
+              <p class="cert-desc">Cách sử dụng Gemini để tối ưu hóa quy trình làm việc với dữ liệu. Thực hành phân tích dữ liệu trên BigQuery. Phân cụm K-means và thiết kế mô hình kết nối LLM với sự trợ giúp của AI.</p>
+              <div class="cert-meta">
+                <span class="cert-date"><i class="ph ph-clock"></i> 3 giờ hoàn thành</span>
+                <a href="cert/Gemini for Data Scientists and Analysts _ Google Skills.pdf" target="_blank" class="cert-verify">Xem chứng chỉ <i class="ph ph-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-item reveal-right" data-year="2026">
+          <div class="cert-dot"></div>
+          <div class="cert-card">
+            <div class="cert-logo linkedin">
+              <i class="ph ph-linkedin-logo"></i>
+            </div>
+            <div class="cert-info">
+              <span class="cert-issuer">LinkedIn Learning</span>
+              <h3 class="cert-name">Python for Students</h3>
+              <p class="cert-desc">Nắm vững các khái niệm và kỹ năng cốt lõi của ngôn ngữ lập trình Python, nền tảng bắt buộc để xây dựng các mô hình Machine Learning và Deep Learning.</p>
+              <div class="cert-meta">
+                <span class="cert-date"><i class="ph ph-clock"></i> 1 giờ 8 phút hoàn thành</span>
+                <a href="cert/CertificateOfCompletion_Python for Students.pdf" target="_blank" class="cert-verify">Xem chứng chỉ <i class="ph ph-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-item reveal-left" data-year="2026">
+          <div class="cert-dot"></div>
+          <div class="cert-card">
+            <div class="cert-logo linkedin">
+              <i class="ph ph-chart-bar"></i>
+            </div>
+            <div class="cert-info">
+              <span class="cert-issuer">LinkedIn Learning</span>
+              <h3 class="cert-name">Learning Data Analytics: 1 Foundations</h3>
+              <p class="cert-desc">Hiểu nền tảng về Phân tích Dữ liệu (Data Analytics) và Thống kê (Statistics), hỗ trợ xây dựng Data Pipeline hiệu quả.</p>
+              <div class="cert-meta">
+                <span class="cert-date"><i class="ph ph-calender"></i> 3 , 2026</span>
+                <a href="cert/CertificateOfCompletion_Learning Data Analytics 1 Foundations (1).pdf" target="_blank" class="cert-verify">Xem chứng chỉ <i class="ph ph-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-item reveal-right" data-year="2026">
+          <div class="cert-dot"></div>
+          <div class="cert-card">
+            <div class="cert-logo linkedin">
+              <i class="ph ph-brain"></i>
+            </div>
+            <div class="cert-info">
+              <span class="cert-issuer">LinkedIn Learning</span>
+              <h3 class="cert-name">Deep Learning: Getting Started</h3>
+              <p class="cert-desc">Xây dựng hiểu biết nền tảng về Deep Learning, tạo bước đệm vững chắc trước khi tiến vào các mạng nơ-ron phức tạp như CNN, U-Net.</p>
+              <div class="cert-meta">
+                <span class="cert-date"><i class="ph ph-calendar"></i> Tháng 4, 2026</span>
+                <a href="cert/CertificateOfCompletion_Deep Learning Getting Started.pdf" target="_blank" class="cert-verify">Xem chứng chỉ <i class="ph ph-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-item reveal-left" data-year="2026">
+          <div class="cert-dot"></div>
+          <div class="cert-card">
+            <div class="cert-logo linkedin">
+              <i class="ph ph-chat-teardrop-text"></i>
+            </div>
+            <div class="cert-info">
+              <span class="cert-issuer">LinkedIn Learning</span>
+              <h3 class="cert-name">Introduction to Large Language Models</h3>
+              <p class="cert-desc">Nắm bắt xu hướng công nghệ mới về Mô hình ngôn ngữ lớn (LLMs) và các ứng dụng thực tế của Generative AI.</p>
+              <div class="cert-meta">
+                <span class="cert-date"><i class="ph ph-clock"></i> 1 giờ 17 phút hoàn thành</span>
+                <a href="cert/CertificateOfCompletion_Introduction to Large Language Models.pdf" target="_blank" class="cert-verify">Xem chứng chỉ <i class="ph ph-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-item reveal-right" data-year="2026">
+          <div class="cert-dot"></div>
+          <div class="cert-card">
+            <div class="cert-logo linkedin">
+              <i class="ph ph-translate"></i>
+            </div>
+            <div class="cert-info">
+              <span class="cert-issuer">LinkedIn Learning</span>
+              <h3 class="cert-name">Natural Language Processing Fundamentals by Pearson</h3>
+              <p class="cert-desc">Kiến thức nền tảng về Xử lý ngôn ngữ tự nhiên (NLP), giúp mở rộng tư duy xử lý dữ liệu phi cấu trúc (văn bản).</p>
+              <div class="cert-meta">
+                <span class="cert-date"><i class="ph ph-clock"></i> 6 giờ 10 phút hoàn thành</span>
+                <a href="cert/CertificateOfCompletion_Natural Language Processing NLP Fundamentals by Pearson.pdf" target="_blank" class="cert-verify">Xem chứng chỉ <i class="ph ph-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cert-item reveal-left" data-year="2026">
+          <div class="cert-dot"></div>
+          <div class="cert-card">
+            <div class="cert-logo nodejs">
+              <i class="ph ph-file-code"></i>
+            </div>
+            <div class="cert-info">
+              <span class="cert-issuer">LinkedIn Learning</span>
+              <h3 class="cert-name">Node.js Essential Training</h3>
+              <p class="cert-desc">Nắm vững lập trình backend với Node.js, phục vụ trực tiếp cho việc viết API để triển khai (serve) mô hình AI ra thực tế.</p>
+              <div class="cert-meta">
+                <span class="cert-date"><i class="ph ph-calendar"></i> Tháng 3, 2026</span>
+                <a href="cert/CertificateOfCompletion_Node.js Essential Training.pdf" target="_blank" class="cert-verify">Xem chứng chỉ <i class="ph ph-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-item reveal-right" data-year="2026">
+          <div class="cert-dot"></div>
+          <div class="cert-card">
+            <div class="cert-logo mendix">
+              <i class="ph ph-devices"></i>
+            </div>
+            <div class="cert-info">
+              <span class="cert-issuer">Mendix Academy</span>
+              <h3 class="cert-name">Mendix Rapid Developer Certification</h3>
+              <p class="cert-desc">Năng lực phát triển ứng dụng nhanh (Rapid Development) bằng nền tảng low-code, giúp rút ngắn thời gian xây dựng giao diện demo hệ thống AI.</p>
+              <div class="cert-meta">
+                <span class="cert-date"><i class="ph ph-calendar"></i> Tháng 3, 2026</span>
+                <a href="cert/MendixRapidDeveloperCertification-108091.pdf_FirstPage.pdf" target="_blank" class="cert-verify">Xem chứng chỉ <i class="ph ph-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ CONTACT ═══ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-label reveal-left">// 04 — Liên hệ</div>
+      <div class="contact-grid">
+        <div class="contact-left">
+          <h2 class="section-title reveal-up">Hãy kết nối<br /><span class="gradient-text">cùng nhau</span></h2>
+          <p class="contact-desc reveal-up delay-1">
+            Mình luôn sẵn sàng cho những cơ hội mới — dù là cộng tác, internship hay chỉ đơn giản là một cuộc trò chuyện về AI.
+          </p>
+          <div class="contact-links reveal-up delay-2">
+            <a href="mailto:nguyenvana@email.com" class="social-link">
+              <div class="social-icon"><i class="ph ph-envelope"></i></div>
+              <div class="social-text">
+                <span class="social-label">Email</span>
+                <span class="social-val">ngoynhi2601@email.com</span>
+              </div>
+            </a>
+            <a href="https://github.com" target="_blank" class="social-link">
+              <div class="social-icon"><i class="ph ph-github-logo"></i></div>
+              <div class="social-text">
+                <span class="social-label">GitHub</span>
+                <span class="social-val">https://github.com/Ynhi49cnttc</span>
+              </div>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="social-link">
+              <div class="social-icon"><i class="ph ph-linkedin-logo"></i></div>
+              <div class="social-text">
+                <span class="social-label">LinkedIn</span>
+                <span class="social-val">www.linkedin.com/in/ngô-ý-nhi-3818323b4</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-right reveal-right delay-1">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="fname">Tên của bạn</label>
+              <input type="text" id="fname" name="name" placeholder="Nguyen Van B" autocomplete="off" />
+              <span class="form-error" id="nameErr"></span>
+            </div>
+            <div class="form-group">
+              <label for="femail">Email</label>
+              <input type="email" id="femail" name="email" placeholder="hello@example.com" autocomplete="off" />
+              <span class="form-error" id="emailErr"></span>
+            </div>
+            <div class="form-group">
+              <label for="fsubject">Chủ đề</label>
+              <input type="text" id="fsubject" name="subject" placeholder="Cộng tác dự án AI" autocomplete="off" />
+              <span class="form-error" id="subjectErr"></span>
+            </div>
+            <div class="form-group">
+              <label for="fmessage">Tin nhắn</label>
+              <textarea id="fmessage" name="message" rows="5" placeholder="Mình muốn trao đổi về..."></textarea>
+              <span class="form-error" id="msgErr"></span>
+            </div>
+            <button type="submit" class="btn-submit" id="submitBtn">
+              <span class="btn-text">Gửi tin nhắn</span>
+              <i class="ph ph-paper-plane-tilt"></i>
+            </button>
+            <div class="form-success" id="formSuccess">
+              <i class="ph ph-check-circle"></i>
+              <span>Gửi thành công! Mình sẽ phản hồi sớm nhất.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-copy">© 2026 Ngô Ý Nhi</span>
+        <a href="#hero" class="back-top"><i class="ph ph-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════ PROJECT MODAL ═══ -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose"><i class="ph ph-x"></i></button>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
