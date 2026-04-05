@@ -1,6 +1,6 @@
 # 🤖 AI Engineer Portfolio
 
-Portfolio website cá nhân - **Ngô Ý Nhi** — AI Engineer / Student.
+Portfolio website cá nhân - **Ngô Ý Nhi** 
 ---
 
 
