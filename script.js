@@ -159,7 +159,7 @@
   const projects = {
     1: {
       title: 'BEAT-Unet: Salient Object Segmentation',
-      img:   './images/VisualSalience.png',
+      img:   './images/visualsalience.png',
       desc: `Nghiên cứu kiến trúc mạng U-Net kết hợp Transformer bottleneck, module dò biên học được (Learnable Edge) và Attention Gate. Sử dụng hàm mất mát lai (BCE + Dice) giúp cân bằng độ chính xác pixel và tính toàn vẹn cấu trúc. Huấn luyện trên tập DUTS-TR đạt hiệu suất cao trong việc phân đoạn các đối tượng nổi bật trên nền phức tạp.`,
       tech: ['PyTorch', 'Transformer', 'U-Net', 'Computer Vision', 'Deep Learning'],
       link: './cert/VisualSalience.pdf',
