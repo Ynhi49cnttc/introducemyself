@@ -36,7 +36,7 @@ python -m http.server 8000
 ```
 ---
 
-## 🔄 Development Process
+## Development Process
 
 ### Bước 1 — Thiết kế layout
 - Xác định color palette
